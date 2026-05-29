@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thiara Enterprises LLC | Freight Transportation | Auburn, WA</title>
+<meta name="description" content="Thiara Enterprises LLC – Reliable freight transportation, dispatch coordination, and carrier communication services based in Auburn, Washington.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b1f3a;
+    --navy-light: #152d52;
+    --blue: #1a4080;
+    --accent: #e8a020;
+    --accent-dark: #c07a00;
+    --white: #ffffff;
+    --off-white: #f4f6f9;
+    --gray: #6b7a8d;
+    --light-gray: #e2e7ef;
+    --text: #1c2a3a;
+    --text-light: #4a5568;
+    --danger: #c0392b;
+    --success: #2ecc71;
+    --shadow: 0 4px 24px rgba(11,31,58,0.10);
+    --shadow-lg: 0 8px 48px rgba(11,31,58,0.16);
+    --radius: 6px;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    --nav-h: 72px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    background: var(--navy);
+    display: flex; align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; flex: 1;
+  }
+  .nav-logo-icon {
+    width: 40px; height: 40px;
+    background: var(--accent);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -1px;
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    display: flex; flex-direction: column;
+    line-height: 1.15;
+  }
+  .nav-logo-name {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .nav-logo-sub {
+    font-size: 10px; font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex; align-items: center; gap: 4px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.78);
+    font-family: var(--font-body);
+    font-size: 14px; font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+  .nav-links a.active { color: var(--accent); }
+
+  .nav-cta {
+    margin-left: 12px;
+    background: var(--accent) !important;
+    color: var(--navy) !important;
+    font-weight: 700 !important;
+    padding: 9px 20px !important;
+    border-radius: var(--radius) !important;
+  }
+  .nav-cta:hover { background: var(--accent-dark) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* ─── PAGE SYSTEM ─── */
+  .page { display: none; padding-top: var(--nav-h); min-height: 100vh; }
+  .page.active { display: block; }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--blue) 100%);
+    padding: 100px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-road {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(90deg, var(--accent) 0, var(--accent) 30px, transparent 30px, transparent 60px);
+    opacity: 0.5;
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+    align-items: center; position: relative; z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(232,160,32,0.15);
+    border: 1px solid rgba(232,160,32,0.35);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px; font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-badge::before { content: '●'; font-size: 8px; }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: 17px; font-weight: 300;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.75;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent);
+    color: var(--navy);
+    font-weight: 700; font-size: 15px;
+    padding: 14px 28px; border-radius: var(--radius);
+    text-decoration: none; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-family: var(--font-body);
+  }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-weight: 600; font-size: 15px;
+    padding: 13px 28px; border-radius: var(--radius);
+    text-decoration: none; border: 2px solid rgba(255,255,255,0.35);
+    cursor: pointer; transition: border-color 0.2s, background 0.2s;
+    font-family: var(--font-body);
+  }
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; padding: 36px;
+    backdrop-filter: blur(8px);
+  }
+  .hero-card h3 {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 700;
+    color: var(--white); margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 42px; font-weight: 800;
+    color: var(--accent); line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 12px; font-weight: 500;
+    color: rgba(255,255,255,0.60);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 4px; display: block;
+  }
+  .stat-divider {
+    width: 1px; background: rgba(255,255,255,0.1);
+    height: 100%; margin: 0 auto;
+  }
+
+  /* ─── TRUST BAR ─── */
+  .trust-bar {
+    background: var(--off-white);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 20px 40px;
+  }
+  .trust-bar-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    gap: 40px; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; font-weight: 500; color: var(--text-light);
+  }
+  .trust-icon {
+    width: 32px; height: 32px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 80px 40px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800; color: var(--navy);
+    line-height: 1.1; margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 17px; font-weight: 300;
+    color: var(--text-light); max-width: 560px; line-height: 1.75;
+  }
+  .section-header { margin-bottom: 52px; }
+
+  /* ─── SERVICES GRID ─── */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--accent); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 52px; height: 52px;
+    background: var(--off-white);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; margin-bottom: 18px;
+  }
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 700;
+    color: var(--navy); margin-bottom: 10px;
+  }
+  .service-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+  /* ─── WHY US ─── */
+  .why-section { background: var(--navy); }
+  .why-section .section-title { color: var(--white); }
+  .why-section .section-sub { color: rgba(255,255,255,0.65); }
+  .why-section .section-label { color: var(--accent); }
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .why-item {
+    display: flex; gap: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 24px;
+    transition: background 0.2s;
+  }
+  .why-item:hover { background: rgba(255,255,255,0.08); }
+  .why-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: rgba(232,160,32,0.15);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .why-item h4 {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 700;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .why-item p { font-size: 14px; color: rgba(255,255,255,0.60); line-height: 1.65; }
+
+  /* ─── CONTACT FORM ─── */
+  .contact-section { background: var(--off-white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+  .contact-info h3 {
+    font-family: var(--font-display);
+    font-size: 24px; font-weight: 700;
+    color: var(--navy); margin-bottom: 20px;
+  }
+  .contact-detail {
+    display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start;
+  }
+  .contact-detail-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .contact-detail-text strong {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--text-light); text-transform: uppercase;
+    letter-spacing: 0.8px; margin-bottom: 2px;
+  }
+  .contact-detail-text span, .contact-detail-text a {
+    font-size: 15px; color: var(--text);
+    text-decoration: none;
+  }
+  .contact-detail-text a:hover { color: var(--blue); }
+
+  .form-card {
+    background: var(--white);
+    border-radius: 12px; padding: 40px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--light-gray);
+  }
+  .form-card h3 {
+    font-family: var(--font-display);
+    font-size: 26px; font-weight: 700;
+    color: var(--navy); margin-bottom: 24px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--text); margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .form-group label span { color: var(--danger); }
+  .form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 11px 14px;
+    border: 1.5px solid var(--light-gray);
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 15px; color: var(--text);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(26,64,128,0.10);
+  }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+
+  .sms-consent-box {
+    background: var(--off-white);
+    border: 1.5px solid var(--light-gray);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+  }
+  .sms-consent-row {
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .sms-consent-row input[type="checkbox"] {
+    width: 18px; height: 18px; flex-shrink: 0;
+    margin-top: 2px; cursor: pointer;
+    accent-color: var(--blue);
+  }
+  .sms-consent-text {
+    font-size: 12.5px; color: var(--text-light); line-height: 1.65;
+  }
+  .sms-consent-text a { color: var(--blue); text-decoration: underline; }
+
+  .form-submit-btn {
+    width: 100%;
+    background: var(--navy);
+    color: var(--white);
+    border: none; border-radius: var(--radius);
+    font-family: var(--font-display);
+    font-size: 18px; font-weight: 700;
+    padding: 15px 28px; cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .form-submit-btn:hover { background: var(--blue); transform: translateY(-1px); }
+
+  .form-success {
+    display: none;
+    background: #e8f8ef; border: 1.5px solid #2ecc71;
+    border-radius: var(--radius); padding: 16px 20px;
+    color: #1a7a3c; font-weight: 600; font-size: 14px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  .form-success.show { display: block; }
+
+  /* ─── PAGE CONTENT SECTIONS ─── */
+  .page-hero {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--blue) 100%);
+    padding: 60px 40px;
+    text-align: center;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800; color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.70); }
+
+  .content-section { padding: 64px 40px; }
+  .content-inner { max-width: 900px; margin: 0 auto; }
+  .content-inner h2 {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700;
+    color: var(--navy); margin: 36px 0 12px;
+  }
+  .content-inner h2:first-child { margin-top: 0; }
+  .content-inner p { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 14px; }
+  .content-inner ul { padding-left: 22px; margin-bottom: 14px; }
+  .content-inner ul li { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 6px; }
+  .content-inner a { color: var(--blue); }
+
+  /* ─── ABOUT ─── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  }
+  .about-img-block {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    border-radius: 12px; padding: 52px 40px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .about-img-block::before {
+    content: '🚛';
+    font-size: 80px; display: block; margin-bottom: 20px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  }
+  .about-img-block h3 {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 700;
+    color: var(--white); margin-bottom: 10px;
+  }
+  .about-img-block p { font-size: 14px; color: rgba(255,255,255,0.70); }
+  .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .value-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius); padding: 12px 16px;
+    font-size: 13px; font-weight: 600; color: var(--accent);
+    text-align: center;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    padding: 52px 40px 28px;
+    border-top: 3px solid var(--accent);
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px; margin-bottom: 40px;
+  }
+  .footer-brand {}
+  .footer-brand .nav-logo-name { color: var(--white); font-size: 20px; }
+  .footer-brand .nav-logo-sub { color: var(--accent); }
+  .footer-brand p {
+    font-size: 14px; color: rgba(255,255,255,0.55);
+    line-height: 1.7; margin-top: 14px; max-width: 340px;
+  }
+  .footer-col h4 {
+    font-family: var(--font-display);
+    font-size: 15px; font-weight: 700;
+    color: var(--white); letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a {
+    color: rgba(255,255,255,0.55); text-decoration: none;
+    font-size: 14px; transition: color 0.2s;
+    cursor: pointer;
+  }
+  .footer-col ul li a:hover { color: var(--accent); }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.40); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a {
+    color: rgba(255,255,255,0.55); font-size: 13px;
+    text-decoration: none; transition: color 0.2s; cursor: pointer;
+  }
+  .footer-legal a:hover { color: var(--accent); }
+
+  /* ─── SERVICES DETAILED ─── */
+  .services-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .service-detail-card {
+    background: var(--white); border-radius: 10px;
+    border: 1px solid var(--light-gray);
+    padding: 32px; box-shadow: var(--shadow);
+  }
+  .service-detail-card .service-icon { background: var(--navy); }
+  .service-detail-card h3 {
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 10px;
+  }
+  .service-detail-card p { font-size: 14.5px; color: var(--text-light); line-height: 1.75; }
+  .service-detail-card ul { margin-top: 14px; padding-left: 18px; }
+  .service-detail-card ul li { font-size: 13.5px; color: var(--text-light); margin-bottom: 5px; }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; flex-direction: column; position: fixed;
+      top: var(--nav-h); left: 0; right: 0;
+      background: var(--navy); padding: 20px; gap: 2px; z-index: 999;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 12px 16px; font-size: 15px; }
+    .hamburger { display: flex; }
+
+    .hero { padding: 60px 20px 50px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-card { display: none; }
+
+    section { padding: 56px 20px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .trust-bar-inner { gap: 20px; }
+    .services-detail-grid { grid-template-columns: 1fr; }
+    .page-hero { padding: 48px 20px; }
+    .content-section { padding: 48px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <div class="nav-logo-icon">TE</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Thiara Enterprises</span>
+      <span class="nav-logo-sub">Freight &amp; Logistics</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+    <li><a href="#" onclick="showPage('about')" id="nav-about">About Us</a></li>
+    <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a href="#" onclick="showPage('contact')" class="nav-cta" id="nav-contact">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══ HOME PAGE ═══ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Auburn, Washington — Serving the Pacific Northwest</div>
+        <h1>Freight That <span>Moves</span> With Purpose</h1>
+        <p>Thiara Enterprises LLC delivers dependable freight transportation, precise dispatch coordination, and professional carrier communication services — built on reliability, compliance, and trust.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('contact')">📋 Request a Quote</button>
+          <button class="btn-outline" onclick="showPage('services')">Our Services →</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Trusted Freight Partner</h3>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <span class="stat-num">24/7</span>
+            <span class="stat-label">Dispatch Support</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">DOT</span>
+            <span class="stat-label">Compliant Carrier</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">DV</span>
+            <span class="stat-label">Dry Van Ready</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">RF</span>
+            <span class="stat-label">Reefer Capable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-road"></div>
+  </div>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><div class="trust-icon">✅</div> Licensed &amp; Insured Carrier</div>
+      <div class="trust-item"><div class="trust-icon">📍</div> Based in Auburn, WA</div>
+      <div class="trust-item"><div class="trust-icon">🔒</div> FMCSA Compliant</div>
+      <div class="trust-item"><div class="trust-icon">📡</div> Real-Time Load Updates</div>
+      <div class="trust-item"><div class="trust-icon">🤝</div> Professional Carrier Relations</div>
+    </div>
+  </div>
+
+  <!-- Services Overview -->
+  <section style="background:#fff;">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">End-to-End Freight Solutions</h2>
+        <p class="section-sub">From load pickup to final delivery, Thiara Enterprises coordinates every mile with precision and professionalism.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Freight Transportation</h3>
+          <p>Dry van and reefer freight transportation with reliable, on-time delivery across regional and long-haul routes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📡</div>
+          <h3>Dispatch Coordination</h3>
+          <p>Experienced dispatchers managing load assignments, route planning, and real-time communication with drivers and brokers.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📞</div>
+          <h3>Carrier Communication</h3>
+          <p>Professional carrier-to-broker communication including check calls, ETA updates, and freight status reporting.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Delivery Coordination</h3>
+          <p>Coordinated delivery scheduling and appointment management ensuring smooth dock operations and receiver satisfaction.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Load Updates</h3>
+          <p>Continuous load status updates and check-in reporting throughout transit for brokers, shippers, and receivers.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛎️</div>
+          <h3>Customer Support</h3>
+          <p>Dedicated support for freight inquiries, escalation handling, and responsive communication at every stage.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <button class="btn-primary" onclick="showPage('services')">View All Services →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Why Thiara Enterprises</div>
+        <h2 class="section-title">The Right Partner for Every Load</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.65);">We combine industry expertise with professional communication standards that brokers, shippers, and carriers rely on.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🛡️</div>
+          <div>
+            <h4>Compliance First</h4>
+            <p>We operate fully within FMCSA, DOT, and carrier compliance standards — keeping your freight and our operations above board at all times.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⚡</div>
+          <div>
+            <h4>Fast, Reliable Communication</h4>
+            <p>Prompt check calls, accurate ETAs, and proactive updates mean brokers always know where their freight stands.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🗺️</div>
+          <div>
+            <h4>Pacific Northwest Expertise</h4>
+            <p>Deep knowledge of regional routes, port access, and Pacific Northwest freight lanes from our Auburn, WA base of operations.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🤝</div>
+          <div>
+            <h4>Professional Carrier Relations</h4>
+            <p>We build and maintain professional relationships with carriers, shippers, and brokers — treating every interaction with respect and integrity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section style="background:var(--off-white); text-align:center;">
+    <div class="section-inner" style="max-width:660px;">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Ready to Move Freight?</h2>
+      <p class="section-sub" style="margin:0 auto 32px;">Contact Thiara Enterprises LLC today to discuss your freight transportation needs. We respond promptly to all inquiries.</p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <button class="btn-primary" onclick="showPage('contact')">📋 Send Us a Message</button>
+        <a class="btn-outline" style="background:var(--navy);border-color:var(--navy);color:#fff;" href="mailto:thiarafreight@gmail.com">✉️ thiarafreight@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px;">
+            <div class="nav-logo-icon" style="width:36px;height:36px;font-size:18px;">TE</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">Thiara Enterprises LLC</span>
+              <span class="nav-logo-sub">Freight &amp; Logistics</span>
+            </div>
+          </div>
+          <p>Professional freight transportation, dispatch coordination, and carrier communication services based in Auburn, Washington.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+            <li><a onclick="showPage('services')">Services</a></li>
+            <li><a onclick="showPage('contact')">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a>Auburn, WA</a></li>
+            <li><a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a></li>
+          </ul>
+          <h4 style="margin-top:20px;">Legal</h4>
+          <ul>
+            <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
+            <li><a onclick="showPage('terms')">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Thiara Enterprises LLC. All rights reserved. Auburn, WA | Email: <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ ABOUT PAGE ═══ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <h1>About Thiara Enterprises LLC</h1>
+    <p>Your trusted freight transportation partner in Auburn, Washington</p>
+  </div>
+
+  <section style="background:#fff;">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div>
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">Built on Reliability and Professional Standards</h2>
+          <p style="font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:18px;">
+            Thiara Enterprises LLC is a professionally operated freight transportation and logistics company headquartered in Auburn, Washington. We specialize in freight transportation, dispatch coordination, and professional carrier communication services across the Pacific Northwest and beyond.
+          </p>
+          <p style="font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:18px;">
+            Our team understands the demands of modern freight logistics — the importance of timely check calls, accurate load updates, responsive carrier communication, and seamless delivery coordination. We hold ourselves to the highest professional and compliance standards in every interaction.
+          </p>
+          <p style="font-size:16px;color:var(--text-light);line-height:1.8;margin-bottom:32px;">
+            Whether you need dry van transport, reefer freight services, or experienced dispatch support, Thiara Enterprises is the partner that shows up, communicates clearly, and delivers results.
+          </p>
+          <button class="btn-primary" onclick="showPage('contact')">Get In Touch →</button>
+        </div>
+        <div>
+          <div class="about-img-block">
+            <h3>Thiara Enterprises LLC</h3>
+            <p>Auburn, Washington<br>Freight Transportation &amp; Logistics</p>
+            <div class="about-values">
+              <div class="value-chip">🛡️ Compliance</div>
+              <div class="value-chip">⚡ Reliability</div>
+              <div class="value-chip">📡 Communication</div>
+              <div class="value-chip">🤝 Integrity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Our Commitment</div>
+        <h2 class="section-title">What Sets Us Apart</h2>
+      </div>
+      <div class="why-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="why-item" style="background:var(--white);border-color:var(--light-gray);">
+          <div class="why-icon" style="background:var(--off-white);">📋</div>
+          <div>
+            <h4 style="color:var(--navy);">DOT & FMCSA Compliance</h4>
+            <p style="color:var(--text-light);">We maintain full compliance with all applicable Department of Transportation and FMCSA regulations governing carrier operations.</p>
+          </div>
+        </div>
+        <div class="why-item" style="background:var(--white);border-color:var(--light-gray);">
+          <div class="why-icon" style="background:var(--off-white);">🗓️</div>
+          <div>
+            <h4 style="color:var(--navy);">On-Time Performance</h4>
+            <p style="color:var(--text-light);">Precision scheduling and proactive communication keep freight on time and receivers informed throughout every shipment.</p>
+          </div>
+        </div>
+        <div class="why-item" style="background:var(--white);border-color:var(--light-gray);">
+          <div class="why-icon" style="background:var(--off-white);">🚛</div>
+          <div>
+            <h4 style="color:var(--navy);">Dry Van &amp; Reefer Capable</h4>
+            <p style="color:var(--text-light);">Equipped to handle both standard dry van freight and temperature-sensitive reefer loads with the appropriate expertise and coordination.</p>
+          </div>
+        </div>
+        <div class="why-item" style="background:var(--white);border-color:var(--light-gray);">
+          <div class="why-icon" style="background:var(--off-white);">🌐</div>
+          <div>
+            <h4 style="color:var(--navy);">Professional Relationships</h4>
+            <p style="color:var(--text-light);">We prioritize long-term relationships with brokers, shippers, and receivers — built on consistent, transparent, and respectful communication.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="justify-content:space-between;">
+        <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ SERVICES PAGE ═══ -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <h1>Our Services</h1>
+    <p>Comprehensive freight transportation and logistics solutions for carriers, brokers, and shippers</p>
+  </div>
+
+  <section style="background:var(--off-white);">
+    <div class="section-inner">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-label">Full-Service Freight Logistics</div>
+        <h2 class="section-title">What Thiara Enterprises Delivers</h2>
+        <p class="section-sub" style="margin:0 auto;">From initial dispatch to final delivery confirmation, we handle the details so your freight moves smoothly.</p>
+      </div>
+      <div class="services-detail-grid">
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">🚛</span>
+          </div>
+          <h3>Freight Transportation</h3>
+          <p>Thiara Enterprises provides professional freight transportation services for dry van and reefer loads across regional and interstate routes. We coordinate with drivers and carriers to ensure safe, timely, and compliant delivery of goods.</p>
+          <ul>
+            <li>Dry van freight transportation</li>
+            <li>Reefer / temperature-controlled freight</li>
+            <li>Regional and long-haul routes</li>
+            <li>FMCSA and DOT compliant operations</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">📡</span>
+          </div>
+          <h3>Dispatch Coordination</h3>
+          <p>Our dispatch team manages load assignments, communicates route details, handles check-ins, and keeps operations running efficiently from first mile to last. We act as the critical link between carriers and brokers.</p>
+          <ul>
+            <li>Load booking and assignment</li>
+            <li>Driver check-in and monitoring</li>
+            <li>Route guidance and optimization</li>
+            <li>Broker and shipper coordination</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">📞</span>
+          </div>
+          <h3>Carrier Communication</h3>
+          <p>Professional, timely, and accurate communication between carriers, brokers, and shippers is essential to freight logistics. We deliver structured carrier communications that meet industry standards and broker expectations.</p>
+          <ul>
+            <li>Scheduled check calls</li>
+            <li>ETA reporting and confirmations</li>
+            <li>Incident and delay notifications</li>
+            <li>Broker and shipper correspondence</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">🔄</span>
+          </div>
+          <h3>Load Updates</h3>
+          <p>We provide continuous, real-time load status updates from pickup to delivery — so brokers, shippers, and receivers always know exactly where their freight stands at every stage of transit.</p>
+          <ul>
+            <li>Pickup confirmations</li>
+            <li>In-transit status updates</li>
+            <li>Delivery notifications</li>
+            <li>POD (Proof of Delivery) follow-up</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">📦</span>
+          </div>
+          <h3>Delivery Coordination</h3>
+          <p>We manage delivery appointments, receiver communication, and dock scheduling to ensure smooth freight handoffs and minimize wait times for drivers and facilities alike.</p>
+          <ul>
+            <li>Delivery appointment scheduling</li>
+            <li>Receiver and dock communication</li>
+            <li>Last-mile coordination</li>
+            <li>Post-delivery confirmation</li>
+          </ul>
+        </div>
+
+        <div class="service-detail-card">
+          <div class="service-icon" style="background:var(--navy);">
+            <span style="font-size:24px;">🛎️</span>
+          </div>
+          <h3>Customer Support</h3>
+          <p>Our customer support team is available to respond to freight inquiries, address concerns, and provide prompt follow-up — making sure every partner and client receives professional, courteous service.</p>
+          <ul>
+            <li>Freight inquiry responses</li>
+            <li>Issue resolution and escalation</li>
+            <li>Document and paperwork support</li>
+            <li>Ongoing client communication</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--navy); text-align:center;">
+    <div class="section-inner" style="max-width:640px;">
+      <h2 class="section-title" style="color:var(--white);">Ready to Work With Us?</h2>
+      <p style="color:rgba(255,255,255,0.65); margin-bottom:32px;">Contact Thiara Enterprises LLC to discuss your freight transportation requirements. We're ready to move your cargo with professionalism and care.</p>
+      <button class="btn-primary" onclick="showPage('contact')">📋 Contact Us Today</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ CONTACT PAGE ═══ -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <h1>Contact Us</h1>
+    <p>Reach out to Thiara Enterprises LLC — we respond promptly to all freight inquiries</p>
+  </div>
+
+  <section class="contact-section">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p style="font-size:15px;color:var(--text-light);line-height:1.75;margin-bottom:28px;">
+            Have a freight inquiry, dispatch request, or carrier communication question? Fill out the form and our team will respond promptly.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Location</strong>
+              <span>Auburn, Washington</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⏰</div>
+            <div class="contact-detail-text">
+              <strong>Operations</strong>
+              <span>Dispatch &amp; Freight Coordination</span>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; background:var(--navy); border-radius:10px; padding:24px;">
+            <p style="font-size:13px; font-weight:700; color:var(--accent); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px;">SMS Notice</p>
+            <p style="font-size:13px; color:rgba(255,255,255,0.65); line-height:1.7;">
+              If you opt in to SMS messages, you will receive conversational messages only from Thiara Enterprises LLC. Message frequency may vary. Message and data rates may apply. Reply <strong style="color:#fff;">STOP</strong> to unsubscribe or <strong style="color:#fff;">HELP</strong> for assistance.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name <span>*</span></label>
+                <input type="text" name="firstName" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name <span>*</span></label>
+                <input type="text" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address <span>*</span></label>
+              <input type="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="(206) 555-0100">
+            </div>
+
+            <!-- SMS Consent -->
+            <div class="sms-consent-box">
+              <div class="sms-consent-row">
+                <input type="checkbox" id="smsConsent" name="smsConsent">
+                <label class="sms-consent-text" for="smsConsent">
+                  By providing your phone number, you consent to receive conversational messages from Thiara Enterprises LLC. Message frequency may vary. On average, 1–2 messages per month. Message and data rates may apply. Text <strong>STOP</strong> to unsubscribe. Text <strong>HELP</strong> for assistance. For more information, please review our <a href="#" onclick="showPage('privacy')">Privacy Policy</a> and <a href="#" onclick="showPage('terms')">Terms and Conditions</a>.
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Message <span>*</span></label>
+              <textarea name="message" placeholder="Please describe your freight transportation needs, load details, or any questions you have for our team..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">Send Message →</button>
+            <div class="form-success" id="formSuccess">
+              ✅ Thank you! Your message has been received. We'll be in touch shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ PRIVACY POLICY PAGE ═══ -->
+<div class="page" id="page-privacy">
+  <div class="page-hero">
+    <h1>Privacy Policy</h1>
+    <p>Thiara Enterprises LLC — Auburn, Washington</p>
+  </div>
+  <section class="content-section">
+    <div class="content-inner">
+      <p><strong>Effective Date:</strong> January 1, 2025<br>
+      <strong>Company:</strong> Thiara Enterprises LLC<br>
+      <strong>Contact:</strong> <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a><br>
+      <strong>Location:</strong> Auburn, Washington</p>
+
+      <h2>1. Introduction</h2>
+      <p>Thiara Enterprises LLC ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website or contact us for freight transportation and logistics services.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We may collect personal information that you voluntarily provide to us, including but not limited to:</p>
+      <ul>
+        <li>Name (first and last)</li>
+        <li>Mailing or business address</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Freight and shipping inquiry details</li>
+      </ul>
+      <p>We collect this information when you submit a contact form, send us an email, or otherwise communicate with us regarding our services.</p>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect solely to:</p>
+      <ul>
+        <li>Respond to your freight transportation and logistics inquiries</li>
+        <li>Communicate with you regarding your service requests</li>
+        <li>Coordinate dispatch, carrier communication, and delivery services you have requested</li>
+        <li>Maintain records of service interactions as required</li>
+      </ul>
+      <p>We do not use your information for promotional marketing, advertising, or to send unsolicited commercial messages.</p>
+
+      <h2>4. SMS / Text Messaging</h2>
+      <p>If you provide your phone number and opt in to receive SMS communications from Thiara Enterprises LLC, the following terms apply:</p>
+      <ul>
+        <li>You will receive <strong>conversational messages only</strong> — such as responses to inquiries and freight-related updates you have requested.</li>
+        <li>Message frequency may vary. Most users receive approximately 1–2 messages per month.</li>
+        <li>Message and data rates may apply, depending on your carrier and plan.</li>
+        <li>You may opt out at any time by replying <strong>STOP</strong> to any message.</li>
+        <li>For assistance, reply <strong>HELP</strong>.</li>
+        <li>SMS opt-in is completely optional and is not required to receive services from Thiara Enterprises LLC.</li>
+      </ul>
+
+      <h2>5. No Sharing of Personal Information</h2>
+      <p>We take your privacy seriously. Your email address and phone number will not be sold, rented, leased, or shared with any third party for any purpose.</p>
+      <p>No mobile information, including phone numbers, SMS opt-in data, or consent records, will be shared with third parties or affiliates for marketing or promotional purposes.</p>
+      <p>Text messaging originator opt-in data and consent will not be shared with any third parties under any circumstances.</p>
+
+      <h2>6. Data Security</h2>
+      <p>We implement reasonable and appropriate technical and administrative measures to protect the personal information you provide from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
+
+      <h2>7. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Request access to the personal information we hold about you</li>
+        <li>Request correction of inaccurate information</li>
+        <li>Request deletion of your personal information, subject to applicable legal requirements</li>
+        <li>Opt out of SMS communications at any time by replying STOP</li>
+      </ul>
+
+      <h2>8. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>Our website and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children.</p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of our website after changes are posted constitutes your acceptance of the revised policy.</p>
+
+      <h2>11. Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+      <p><strong>Thiara Enterprises LLC</strong><br>
+      Auburn, Washington<br>
+      Email: <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a></p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ TERMS & CONDITIONS PAGE ═══ -->
+<div class="page" id="page-terms">
+  <div class="page-hero">
+    <h1>Terms and Conditions</h1>
+    <p>Thiara Enterprises LLC — Auburn, Washington</p>
+  </div>
+  <section class="content-section">
+    <div class="content-inner">
+      <p><strong>Effective Date:</strong> January 1, 2025<br>
+      <strong>Company:</strong> Thiara Enterprises LLC<br>
+      <strong>Email:</strong> <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a><br>
+      <strong>State of Operations:</strong> Washington</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing or using the website of Thiara Enterprises LLC ("Company," "we," "us," or "our"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website or services.</p>
+
+      <h2>2. Description of Services</h2>
+      <p>Thiara Enterprises LLC provides freight transportation, dispatch coordination, carrier communication, and trucking logistics services. All services are subject to availability and applicable regulations.</p>
+
+      <h2>3. Use of Website</h2>
+      <p>You agree to use this website only for lawful purposes and in a manner that does not infringe upon the rights of others. You may not:</p>
+      <ul>
+        <li>Use the site in any way that violates applicable local, state, or federal laws or regulations</li>
+        <li>Transmit any unsolicited or unauthorized advertising or promotional material</li>
+        <li>Attempt to gain unauthorized access to any part of the website or its related systems</li>
+        <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the website</li>
+      </ul>
+
+      <h2>4. SMS / Text Messaging Terms</h2>
+      <p>By submitting your phone number via the Website or otherwise opting in, you consent to receive SMS/text messages from Thiara Enterprises LLC for conversational messages only.</p>
+      <ul>
+        <li><strong>Message Type:</strong> Conversational messages only — such as responses to your inquiries and freight coordination updates.</li>
+        <li><strong>Message Frequency:</strong> Message frequency may vary. Most users receive approximately 1–2 messages per month.</li>
+        <li><strong>Opt-Out:</strong> Reply <strong>STOP</strong> at any time to unsubscribe from SMS communications.</li>
+        <li><strong>Help:</strong> Reply <strong>HELP</strong> for assistance.</li>
+        <li><strong>Rates:</strong> Message and data rates may apply, depending on your mobile carrier and plan.</li>
+        <li><strong>Opt-In Optional:</strong> Providing your phone number and consenting to SMS is completely voluntary and not required to request or receive services.</li>
+        <li><strong>No Third-Party Sharing:</strong> Your phone number, opt-in data, and SMS consent will not be shared with any third parties.</li>
+      </ul>
+
+      <h2>5. Intellectual Property</h2>
+      <p>All content on this website, including text, graphics, logos, and images, is the property of Thiara Enterprises LLC and is protected by applicable intellectual property laws. Unauthorized use, reproduction, or distribution of any content is prohibited.</p>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>This website and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. Thiara Enterprises LLC makes no representations or warranties regarding the accuracy, completeness, or reliability of any content on the site.</p>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by law, Thiara Enterprises LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your access to or use of (or inability to use) this website or our services.</p>
+
+      <h2>8. Governing Law</h2>
+      <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Washington, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts located in Washington State.</p>
+
+      <h2>9. Privacy</h2>
+      <p>Your use of this website is also governed by our <a href="#" onclick="showPage('privacy')">Privacy Policy</a>, which is incorporated into these Terms and Conditions by reference.</p>
+
+      <h2>10. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website after any changes constitutes your acceptance of the revised terms.</p>
+
+      <h2>11. Contact Information</h2>
+      <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+      <p><strong>Thiara Enterprises LLC</strong><br>
+      Auburn, Washington<br>
+      Email: <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a></p>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+        <div class="footer-legal">
+          <a onclick="showPage('privacy')">Privacy Policy</a>
+          <a onclick="showPage('terms')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    const navEl = document.getElementById('nav-' + page);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Close mobile nav
+    document.getElementById('navLinks').classList.remove('open');
+  }
+
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    const btn = document.querySelector('.form-submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('formSuccess').classList.add('show');
+      document.getElementById('contactForm').reset();
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 5000);
+    }, 900);
+  }
+</script>
+</body>
+</html>
