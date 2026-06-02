@@ -1,1 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms and Conditions | Thiara Enterprises LLC</title>
+<meta name="description" content="Terms and Conditions for Thiara Enterprises LLC — Auburn, Washington. Review our terms of service including SMS messaging terms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b1f3a;
+    --navy-light: #152d52;
+    --blue: #1a4080;
+    --accent: #e8a020;
+    --white: #ffffff;
+    --off-white: #f4f6f9;
+    --gray: #6b7a8d;
+    --light-gray: #e2e7ef;
+    --text: #1c2a3a;
+    --text-light: #4a5568;
+    --shadow: 0 4px 24px rgba(11,31,58,0.10);
+    --radius: 6px;
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+    --nav-h: 72px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.65;
+    font-size: 16px;
+  }
 
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    background: var(--navy);
+    display: flex; align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; flex: 1;
+  }
+  .nav-logo-icon {
+    width: 40px; height: 40px;
+    background: var(--accent);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 22px; font-weight: 800;
+    color: var(--navy); letter-spacing: -1px;
+  }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .nav-logo-name {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 700;
+    color: var(--white); letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .nav-logo-sub {
+    font-size: 10px; font-weight: 400;
+    color: var(--accent); letter-spacing: 2px; text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex; align-items: center; gap: 4px; list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none; color: rgba(255,255,255,0.78);
+    font-family: var(--font-body); font-size: 14px; font-weight: 500;
+    padding: 8px 14px; border-radius: var(--radius);
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+  .nav-cta {
+    margin-left: 12px; background: var(--accent) !important;
+    color: var(--navy) !important; font-weight: 700 !important;
+    padding: 9px 20px !important; border-radius: var(--radius) !important;
+  }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+  }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, var(--blue) 100%);
+    padding: 80px 40px 60px;
+    padding-top: calc(var(--nav-h) + 60px);
+    text-align: center;
+  }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800; color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero p { font-size: 16px; color: rgba(255,255,255,0.70); }
+
+  /* CONTENT */
+  .content-section { padding: 64px 40px 80px; }
+  .content-inner { max-width: 800px; margin: 0 auto; }
+  .content-inner p { margin-bottom: 16px; color: var(--text-light); font-size: 15.5px; line-height: 1.8; }
+  .content-inner h2 {
+    font-family: var(--font-display);
+    font-size: 24px; font-weight: 700;
+    color: var(--navy);
+    margin: 36px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .content-inner ul { margin: 12px 0 16px 20px; }
+  .content-inner ul li {
+    color: var(--text-light); font-size: 15.5px;
+    line-height: 1.8; margin-bottom: 6px;
+  }
+  .content-inner a { color: var(--blue); }
+  .content-inner a:hover { text-decoration: underline; }
+
+  /* SMS Box */
+  .sms-terms-box {
+    background: var(--off-white);
+    border: 1px solid var(--light-gray);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin: 20px 0;
+  }
+  .sms-terms-box p { margin-bottom: 10px; color: var(--text); }
+  .sms-terms-box p:last-child { margin-bottom: 0; }
+  .sms-terms-box strong { color: var(--navy); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 28px 40px;
+    border-top: 3px solid var(--accent);
+  }
+  .footer-inner { max-width: 800px; margin: 0 auto; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.40); }
+  .footer-legal { display: flex; gap: 20px; }
+  .footer-legal a {
+    color: rgba(255,255,255,0.55); font-size: 13px;
+    text-decoration: none; transition: color 0.2s;
+  }
+  .footer-legal a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; flex-direction: column; position: fixed;
+      top: var(--nav-h); left: 0; right: 0;
+      background: var(--navy); padding: 20px; gap: 2px; z-index: 999;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 12px 16px; font-size: 15px; }
+    .hamburger { display: flex; }
+    .content-section { padding: 48px 20px; }
+    .page-hero { padding: 48px 20px; padding-top: calc(var(--nav-h) + 40px); }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/">
+    <div class="nav-logo-icon">TE</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">Thiara Enterprises</span>
+      <span class="nav-logo-sub">Freight &amp; Logistics</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About Us</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>Terms and Conditions</h1>
+  <p>Thiara Enterprises LLC — Auburn, Washington</p>
+</div>
+
+<!-- CONTENT -->
+<section class="content-section">
+  <div class="content-inner">
+    <p><strong>Effective Date:</strong> January 1, 2025<br>
+    <strong>Company:</strong> Thiara Enterprises LLC<br>
+    <strong>Email:</strong> <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a><br>
+    <strong>State of Operations:</strong> Washington</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using the website of Thiara Enterprises LLC ("Company," "we," "us," or "our"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our website or services.</p>
+
+    <h2>2. Description of Services</h2>
+    <p>Thiara Enterprises LLC provides freight transportation, dispatch coordination, carrier communication, and trucking logistics services. All services are subject to availability and applicable regulations.</p>
+
+    <h2>3. Use of Website</h2>
+    <p>You agree to use this website only for lawful purposes and in a manner that does not infringe upon the rights of others. You may not:</p>
+    <ul>
+      <li>Use the site in any way that violates applicable local, state, or federal laws or regulations</li>
+      <li>Transmit any unsolicited or unauthorized advertising or promotional material</li>
+      <li>Attempt to gain unauthorized access to any part of the website or its related systems</li>
+      <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the website</li>
+    </ul>
+
+    <h2>4. SMS / Text Messaging Terms</h2>
+    <p>By opting in to receive SMS messages from Thiara Enterprises LLC, you agree to receive customer care messages.</p>
+
+    <div class="sms-terms-box">
+      <p><strong>Message frequency:</strong> Message frequency may vary. On average, 1-2 messages per month.</p>
+      <p><strong>Rates:</strong> Message and data rates may apply.</p>
+      <p><strong>Opt out:</strong> Reply STOP to unsubscribe at any time.</p>
+      <p><strong>Help:</strong> Reply HELP for assistance.</p>
+    </div>
+
+    <ul>
+      <li><strong>Opt-In Optional:</strong> Providing your phone number and consenting to SMS is completely voluntary and not required to request or receive services.</li>
+      <li><strong>No Third-Party Sharing:</strong> Your phone number, opt-in data, and SMS consent will not be shared with any third parties.</li>
+    </ul>
+
+    <h2>5. Intellectual Property</h2>
+    <p>All content on this website, including text, graphics, logos, and images, is the property of Thiara Enterprises LLC and is protected by applicable intellectual property laws. Unauthorized use, reproduction, or distribution of any content is prohibited.</p>
+
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>This website and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. Thiara Enterprises LLC makes no representations or warranties regarding the accuracy, completeness, or reliability of any content on the site.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Thiara Enterprises LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your access to or use of (or inability to use) this website or our services.</p>
+
+    <h2>8. Governing Law</h2>
+    <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Washington, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the courts located in Washington State.</p>
+
+    <h2>9. Privacy</h2>
+    <p>Your use of this website is also governed by our <a href="/privacy-policy">Privacy Policy</a>, which is incorporated into these Terms and Conditions by reference.</p>
+
+    <h2>10. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website after any changes constitutes your acceptance of the revised terms.</p>
+
+    <h2>11. Contact Information</h2>
+    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+    <p>
+      <strong>Thiara Enterprises LLC</strong><br>
+      Auburn, Washington<br>
+      Email: <a href="mailto:thiarafreight@gmail.com">thiarafreight@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <p>© 2025 Thiara Enterprises LLC | Auburn, WA | <a href="mailto:thiarafreight@gmail.com" style="color:rgba(255,255,255,0.55);">thiarafreight@gmail.com</a></p>
+      <div class="footer-legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
